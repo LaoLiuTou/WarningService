@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Mon Aug 26 10:11:07 CST 2019
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=WarningService.jar
+manifest.mergeall=true
+manifest.mainclass=com.lt.nio.NioServer
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=
