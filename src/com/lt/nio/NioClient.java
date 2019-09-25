@@ -15,7 +15,9 @@ public class NioClient {
     public NioClient init(String serverIp, int port) throws IOException{
         //获取socket通道
         SocketChannel channel = SocketChannel.open();
-        
+        //绑定端口 不绑定则随机
+        channel.bind(new InetSocketAddress("192.168.1.144",1234));
+        /////////////////////
         channel.configureBlocking(false);
         //获得通道管理器
         selector=Selector.open();
@@ -70,7 +72,7 @@ public class NioClient {
     }
     
     public static void main(String[] args) throws IOException {
-        new NioClient().init("127.0.0.1", 9981).listen();
+        new NioClient().init("192.168.1.144", 8765).listen();
     }
     
 }
